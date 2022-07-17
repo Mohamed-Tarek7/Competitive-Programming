@@ -1,5 +1,3 @@
-const int N = 1e5 + 1, oo = 0x7f7f7f7f;
-
 vt<int> adj[N], d(N, oo);
 bool vis[N];
 
