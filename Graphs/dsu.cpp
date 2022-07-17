@@ -1,15 +1,15 @@
 struct dsu{
-    int parent[N];
+    int p[N];
     int groupsize[N];
     dsu(){
         for (int i = 1 ; i < N ; i++){
-            parent[i] = i;
+            p[i] = i;
             groupsize[i] = 1;
         }
     }
     int find(int x){
-        if(parent[x] == x) return x;
-        return parent[x] = find(parent[x]);
+        if(p[x] == x) return x;
+        return p[x] = find(p[x]);
     }
     bool samegroup(int x, int y){
         int a = find(x);
@@ -21,11 +21,11 @@ struct dsu{
         int b = find(y);
         if(a == b) return;
         if(groupsize[a] > groupsize[b]){
-            parent[b] = a;
+            p[b] = a;
             groupsize[a] += groupsize[b];
         }
         else{
-            parent[a] = b;
+            p[a] = b;
             groupsize[b] += groupsize[a];
         }
     }
