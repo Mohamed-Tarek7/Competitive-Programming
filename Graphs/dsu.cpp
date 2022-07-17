@@ -3,7 +3,7 @@ int si[N];
 
 struct dsu{
     dsu(){
-        for (int i = 1 ; i < N ; i++){
+        FOR(i, 1, N){
             p[i] = i;
             si[i] = 1;
         }
