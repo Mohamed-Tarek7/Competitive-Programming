@@ -1,5 +1,3 @@
-const int N = 1e5 + 1;
-
 vt<int> adj[N], lowlink(N), dfn(N);
 vt<pii> bridges;
 int ndf;
