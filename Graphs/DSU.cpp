@@ -9,18 +9,18 @@ struct dsu{
             groupsize[i] = 1;
         }
     }
-    int FindLeader(int node){
+    int findleader(int node){
         if(parent[node] == node) return node;
-        return parent[node] = FindLeader(parent[node]);
+        return parent[node] = findleader(parent[node]);
     }
-    bool SameGroup(int x, int y){
-        int leader1 = FindLeader(x);
-        int leader2 = FindLeader(y);
+    bool samegroup(int x, int y){
+        int leader1 = findleader(x);
+        int leader2 = findleader(y);
         return leader1 == leader2;
     }
-    void MergeGroups(int x, int y){
-        int leader1 = FindLeader(x);
-        int leader2 = FindLeader(y);
+    void mergegroups(int x, int y){
+        int leader1 = findleader(x);
+        int leader2 = findleader(y);
         if(leader1 == leader2) return;
         if(groupsize[leader1] > groupsize[leader2]){
             parent[leader2] = leader1;
@@ -31,8 +31,8 @@ struct dsu{
             groupsize[leader2] += groupsize[leader1];
         }
     }
-    int GetSize(int node){
-        int leader = FindLeader(node);
+    int getsize(int node){
+        int leader = findleader(node);
         return groupsize[leader];
     }
 };
