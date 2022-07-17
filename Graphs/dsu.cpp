@@ -7,30 +7,30 @@ struct dsu{
             groupsize[i] = 1;
         }
     }
-    int find(int node){
-        if(parent[node] == node) return node;
-        return parent[node] = find(parent[node]);
+    int find(int x){
+        if(parent[x] == x) return x;
+        return parent[x] = find(parent[x]);
     }
     bool samegroup(int x, int y){
-        int leader1 = find(x);
-        int leader2 = find(y);
-        return leader1 == leader2;
+        int a = find(x);
+        int b = find(y);
+        return a == b;
     }
     void uni(int x, int y){
-        int leader1 = find(x);
-        int leader2 = find(y);
-        if(leader1 == leader2) return;
-        if(groupsize[leader1] > groupsize[leader2]){
-            parent[leader2] = leader1;
-            groupsize[leader1] += groupsize[leader2];
+        int a = find(x);
+        int b = find(y);
+        if(a == b) return;
+        if(groupsize[a] > groupsize[b]){
+            parent[b] = a;
+            groupsize[a] += groupsize[b];
         }
         else{
-            parent[leader1] = leader2;
-            groupsize[leader2] += groupsize[leader1];
+            parent[a] = b;
+            groupsize[b] += groupsize[a];
         }
     }
-    int size(int node){
-        int leader = find(node);
-        return groupsize[leader];
+    int size(int x){
+        int a = find(x);
+        return groupsize[a];
     }
 };
