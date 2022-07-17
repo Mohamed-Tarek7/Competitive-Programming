@@ -1,5 +1,3 @@
-const int N = 1e5 + 1;
-
 struct dsu{
     int parent[N];
     int groupsize[N];
