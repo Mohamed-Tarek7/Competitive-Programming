@@ -1,5 +1,3 @@
-const int N = 1e5 + 1;
-
 vt<int> adj[N], lowlink(N), dfn(N, -1);
 vt<vt<int>> comps;
 int ndf = 0;
