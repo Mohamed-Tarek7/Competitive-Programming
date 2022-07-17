@@ -1,8 +1,3 @@
-#define ll long long
-
-const ll OO = LONG_LONG_MAX;
-const int N = 1e5;
-
 vt<pair<int, ll>> adj[N];
 vt<ll> d(N, OO);
 vt<int> pre(N);
