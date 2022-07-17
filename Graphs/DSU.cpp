@@ -4,7 +4,7 @@ struct dsu{
     int parent[N];
     int groupsize[N];
     dsu(){
-        FOR(i, 0, N){
+        for (int i = 1 ; i < N ; i++){
             parent[i] = i;
             groupsize[i] = 1;
         }
