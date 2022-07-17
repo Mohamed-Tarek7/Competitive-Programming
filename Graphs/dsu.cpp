@@ -18,7 +18,7 @@ struct dsu{
         int leader2 = findleader(y);
         return leader1 == leader2;
     }
-    void Union(int x, int y){
+    void uni(int x, int y){
         int leader1 = findleader(x);
         int leader2 = findleader(y);
         if(leader1 == leader2) return;
