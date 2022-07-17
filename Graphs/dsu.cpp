@@ -31,7 +31,7 @@ struct dsu{
             groupsize[leader2] += groupsize[leader1];
         }
     }
-    int getsize(int node){
+    int size(int node){
         int leader = find(node);
         return groupsize[leader];
     }
