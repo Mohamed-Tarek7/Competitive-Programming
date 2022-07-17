@@ -3,7 +3,7 @@ const int N = 1e5 + 1;
 struct dsu{
     int parent[N];
     int groupsize[N];
-    DSU(){
+    dsu(){
         FOR(i, 0, N){
             parent[i] = i;
             groupsize[i] = 1;
