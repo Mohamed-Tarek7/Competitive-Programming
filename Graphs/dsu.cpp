@@ -1,11 +1,11 @@
 int p[N];
-int size[N];
+int si[N];
 
 struct dsu{
     dsu(){
         for (int i = 1 ; i < N ; i++){
             p[i] = i;
-            size[i] = 1;
+            si[i] = 1;
         }
     }
     int find(int x){
@@ -17,7 +17,7 @@ struct dsu{
         int b = find(y);
         if (a != b){
            p[a] = b;
-           size[b] += size[a];
+           si[b] += si[a];
         }
     }
 };
