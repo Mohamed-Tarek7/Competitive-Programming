@@ -11,11 +11,6 @@ struct dsu{
         if(p[x] == x) return x;
         return p[x] = find(p[x]);
     }
-    bool samegroup(int x, int y){
-        int a = find(x);
-        int b = find(y);
-        return a == b;
-    }
     void uni(int x, int y){
         int a = find(x);
         int b = find(y);
@@ -28,9 +23,5 @@ struct dsu{
             p[a] = b;
             groupsize[b] += groupsize[a];
         }
-    }
-    int size(int x){
-        int a = find(x);
-        return groupsize[a];
     }
 };
