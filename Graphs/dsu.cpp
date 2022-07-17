@@ -16,7 +16,7 @@ struct dsu{
         int a = find(x);
         int b = find(y);
         if (a != b){
-           f[a] = b;
+           p[a] = b;
            size[b] += size[a];
         }
     }
