@@ -1,5 +1,3 @@
-const int N = 1e5 + 1;
-
 vt<int> adj[N];
 bool vis[N];
 
