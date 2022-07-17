@@ -5,7 +5,7 @@ struct dsu{
     dsu(){
         for (int i = 1 ; i < N ; i++){
             p[i] = i;
-            groupsize[i] = 1;
+            size[i] = 1;
         }
     }
     int find(int x){
