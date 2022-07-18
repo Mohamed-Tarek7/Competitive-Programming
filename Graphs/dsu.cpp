@@ -1,5 +1,4 @@
-int p[N];
-int si[N];
+int p[N], si[N];
 
 struct dsu{
     dsu(){
