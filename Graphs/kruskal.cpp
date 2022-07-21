@@ -23,7 +23,7 @@ struct dsu{
     }
 };
 
-void kruskal(){
+ll kruskal(){
 	dsu dsu;
 	ll ans = 0;
 	pq<pair<pair<int, int>, ll>, vector<pair<pair<int, int>, ll>>, less<pair<pair<int, int>, ll>>> q;
@@ -34,4 +34,5 @@ void kruskal(){
 		q.pop();
 		if (dsu.uni(from, to)) ans += w;
 	}
+	return ans;
 }
