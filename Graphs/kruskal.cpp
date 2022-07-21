@@ -19,7 +19,7 @@ struct dsu{
            p[a] = b;
            si[b] += si[a];
         }
-		return x != y;
+	return x != y;
     }
 };
 
