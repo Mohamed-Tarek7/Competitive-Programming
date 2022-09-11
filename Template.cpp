@@ -18,8 +18,6 @@ using namespace __gnu_pbds;
 #define FOR(i, a, b) for (int i = a; i < b; i++)
 #define FORe(i, a, b) for (int i = a; i <= b; i++)
 #define FORd(i, a, b) for (int i = a; i >= b; i--)
-#define FORp(i, a, b, x) for (int i = a; i <= b; i += x)
-#define FORdp(i, a, b, x) for (int i = a; i >= b; i -= x)
 #define EACH(i, x) for (auto &i : (x))
 #define Fill(x, n) memset(x, n, sizeof x)
 #define sz(x) int(x.size())
@@ -27,7 +25,6 @@ using namespace __gnu_pbds;
 #define WRITE(FILE) freopen(FILE, "w", stdout);
 #define ll long long
 #define ull unsigned long long
-#define pq priority_queue
 #define MP make_pair
 #define pb push_back
 #define f first
@@ -38,7 +35,7 @@ using namespace __gnu_pbds;
 
 const double pi = acos(-1);
 const int N = 1e5 + 1, mod = 1e9 + 7;
-const ll OO = LONG_LONG_MAX;
+const ll OO = LLONG_MAX;
 const int oo = 0x7f7f7f7f;
 int dx4[] = {-1, 0, 0, 1};
 int dy4[] = {0, -1, 1, 0};
@@ -50,13 +47,10 @@ void solve(){
 }
 
 int main(){
-    //READ("FILE");
     FAST();
-    int t = 1;
-    //cin >> t;
-    //preprocess();
-    while (t--){
-        //init();
+    int tests = 1;
+    //cin >> tests;
+    while (tests--){
         solve();
     }
     return 0;
