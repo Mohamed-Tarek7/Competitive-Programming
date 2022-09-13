@@ -42,16 +42,19 @@ int dy4[] = {0, -1, 1, 0};
 int dx8[] = {0, 0, 1, -1, 1, -1, 1, -1};
 int dy8[] = {1, -1, 0, 0, 1, -1, -1, 1};
 
-void solve(){
-    
+void run_case(){
+
 }
 
 int main(){
     FAST();
-    int tests = 1;
-    //cin >> tests;
-    while (tests--){
-        solve();
+    int tc = 1;
+    cin >> tc;
+    //preprocess();
+    for (int i = 1; i <= tc; i++){
+        //cout << "Case #" << i++ << ": ";
+        //initialize();
+        run_case();
     }
     return 0;
 }
