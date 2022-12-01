@@ -5,25 +5,25 @@ using namespace std;
 #define ll long long
 
 void solve(){
-	int x, y; cin >> x >> y;
-	int d = 1, ans = 0, pos = x, last = x;
-	if (x <= y){
-		while (x + d < y){
-			last = pos;
-			pos = x + d;
-			ans += abs(pos - last);
-			d *= -2;
-		}
-	} else{
-		while (x + d > y){
-			last = pos;
-			pos = x + d;
-			ans += abs(pos - last);
-			d *= -2;
-		}
+   int x, y; cin >> x >> y;
+   int d = 1, ans = 0, pos = x, last = x;
+   if (x <= y){
+        while (x + d < y){
+	   last = pos;
+	   pos = x + d;
+	   ans += abs(pos - last);
+	   d *= -2;
+      }
+   } else{
+	while (x + d > y){
+	   last = pos;
+	   pos = x + d;
+	   ans += abs(pos - last);
+	   d *= -2;
 	}
-	last = pos;
-	cout << ans + abs(last - y);
+     }
+   last = pos;
+   cout << ans + abs(last - y);
 }
 
 int main(){
