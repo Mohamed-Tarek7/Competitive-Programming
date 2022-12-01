@@ -15,7 +15,7 @@ void solve(){
    for (int i = 1; i <= 3; i++){
 	auto C = B;
 	for (int j = 0; j < n; j++){
-		C[j] = B[A[j] - 1]; 
+	   C[j] = B[A[j] - 1]; 
 	}
 	B = C;
    }
