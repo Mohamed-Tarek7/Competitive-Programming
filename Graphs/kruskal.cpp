@@ -36,3 +36,64 @@ ll kruskal(){
 	}
 	return ans;
 }
+
+const int N = 1e5 + 1;
+
+struct dsu{
+    int p[N], g[N];
+
+    dsu(){
+        for (int i = 0; i < N; ++i){
+            p[i] = i;
+            g[i] = 1;
+        }
+    }
+
+    int find(int x){
+        if (p[x] == x) 
+            return x;
+
+        return p[x] = find(p[x]);
+    }
+
+    void uni(int x, int y){
+        int a = find(x);
+        int b = find(y);
+
+        if (a != b){
+            if (g[a] > g[b])
+                swap(a, b);
+
+            p[a] = b;
+            g[b] += g[a];
+        }
+    }
+};
+
+void run_case(){
+    int n, m; cin >> n >> m;
+    vector<pair<int, pair<int, int>>> edges;
+
+    for (int i = 0; i < m; ++i){
+        int x, y, w; cin >> x >> y >> w;
+        --x, --y;
+
+        edges.push_back({w, {x, y}});
+    }
+
+    sort(edges.begin(), edges.end());
+
+    ll mst = 0;
+    dsu dsu;
+
+    for (int i = 0; i < m; ++i){
+        int x = edges[i].second.first;
+        int y = edges[i].second.second;
+        int w = edges[i].first;
+
+        if (dsu.find(x) != dsu.find(y)){
+            dsu.uni(x, y);
+            mst += w;
+        }
+    }
+}
