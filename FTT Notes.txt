@@ -1,3 +1,0 @@
-FTT -> Works with doubles
-NTT -> Works with mod having a number of powers of 2 (having 10 power of 2s will cover 2^10 size of array)
-FTT with mod -> Works with any mod
