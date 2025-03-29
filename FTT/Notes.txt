@@ -1,3 +1,5 @@
 FTT -> Works with doubles
 NTT -> Works with mod having a number of powers of 2 (having 10 power of 2s will cover 2^10 size of array)
 FTT with mod -> Works with any mod
+poly = freq[a[i]] * x ^ a[i]
+3x^7 -> 7 can be made in 3 ways
