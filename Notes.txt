@@ -1,0 +1,1 @@
+Diagonals in a grid have common i - j + (m - 1) or i + j
